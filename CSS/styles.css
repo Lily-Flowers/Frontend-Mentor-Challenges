@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Big+Shoulders+Display:wght@700&display=swap");
+
+*,
+html,
+body,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 30px;
+}
+
+p,
+button {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+.wrapper.flex {
+  background-color: hsl(0deg, 0%, 95%);
+}
+.wrapper.grid {
+  background-color: #1a1c28;
+}
+.wrapper .cards-container {
+  display: flex;
+}
+.wrapper .cards-container .card {
+  width: 100%;
+  max-width: 235px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: hsl(0deg, 0%, 100%);
+  padding: 36px;
+}
+.wrapper .cards-container .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wrapper .cards-container .card .content .icon {
+  width: 50px;
+}
+.wrapper .cards-container .card .content h2 {
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 26px;
+  color: hsl(0deg, 0%, 95%);
+}
+.wrapper .cards-container .card .content p {
+  font-size: 11px;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+.wrapper .cards-container .card .c button {
+  border-radius: 9999px;
+  padding: 0.8em 1.8em;
+  border: none;
+  font-size: 12px;
+  text-transform: capitalize;
+  background-color: hsl(0deg, 0%, 95%);
+  border: 2px solid hsl(0deg, 0%, 95%);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.wrapper .cards-container .card .c button:hover {
+  scale: 1.02;
+  background-color: transparent;
+  color: hsl(0deg, 0%, 95%);
+}
+.wrapper .cards-container .card .c button:active {
+  scale: 0.98;
+}
+.wrapper .cards-container .card:first-child {
+  background-color: hsl(31deg, 77%, 52%);
+  border-radius: 5px 0px 0px 5px;
+}
+.wrapper .cards-container .card:first-child button {
+  color: hsl(31deg, 77%, 52%);
+}
+@media (max-width: 700px) {
+  .wrapper .cards-container .card:first-child {
+    border-radius: 5px 5px 0px 0px;
+  }
+}
+.wrapper .cards-container .card:nth-child(2) {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.wrapper .cards-container .card:nth-child(2) button {
+  color: hsl(184deg, 100%, 22%);
+}
+.wrapper .cards-container .card:last-child {
+  border-radius: 0px 5px 5px 0px;
+  background-color: hsl(179deg, 100%, 13%);
+}
+.wrapper .cards-container .card:last-child button {
+  color: hsl(179deg, 100%, 13%);
+}
+@media (max-width: 700px) {
+  .wrapper .cards-container .card:last-child {
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper .cards-container {
+    flex-direction: column;
+  }
+}
+.wrapper .grid-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/0.7;
+  display: grid;
+  gap: clamp(5px, 2vw, 12px);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.wrapper .grid-container .orange {
+  background-color: #eb5020;
+  grid-column: 1/span 4;
+  grid-row: 1/span 2;
+}
+.wrapper .grid-container .yellow {
+  background-color: #ffa401;
+  grid-column: 5/span 2;
+  grid-row: 1/span 2;
+}
+.wrapper .grid-container .green {
+  background-color: #05aa42;
+  grid-column: 1/span 3;
+  grid-row: 3/span 2;
+}
+.wrapper .grid-container .blue {
+  background-color: #01aefd;
+  grid-column: 4/span 3;
+}
+.wrapper .grid-container .blue:first-child {
+  grid-row: 3/span 1;
+}
+.wrapper .grid-container .blue:last-child {
+  grid-row: 4/span 1;
+}
+
+.btn {
+  background: purple;
+  display: flex;
+  border: 2px solid transparent;
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  padding: 6px 10px;
+  border-radius: 10px; 
+  outline: none;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
